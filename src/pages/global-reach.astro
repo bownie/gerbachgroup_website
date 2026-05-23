@@ -1,0 +1,367 @@
+---
+// src/pages/global-reach.astro
+const title = "Global Reach — Gerbach Logistics and Expedition Inc";
+const description = "From Cicero, IL to six continents. Gerbach's global network of logistics hubs, partnerships, and operations worldwide.";
+
+const regions = [
+  {
+    name: "North America",
+    locations: [
+      { city: "Cicero, Illinois", role: "World Headquarters", detail: "Our 400,000 sq ft global command center — where it all began. Advanced logistics algorithms coordinate every regional office from this central hub." },
+      { city: "Miami, USA", role: "Caribbean & Latin American Hub", detail: "Specialised cold-chain capabilities and logistics for Caribbean and Latin American markets." },
+      { city: "Vancouver, Canada", role: "Pacific Coast Gateway", detail: "Connecting North American and Asian markets via the Pacific." }
+    ]
+  },
+  {
+    name: "Europe",
+    locations: [
+      { city: "Sandport, United Kingdom", role: "European Headquarters", detail: "Our gateway to continental European markets. Teams fluent in 15 European languages manage complex customs, regulatory frameworks, and distribution." },
+      { city: "Rotterdam, Netherlands", role: "Strategic Partner", detail: "One of the world's largest ports. Our automated sorting facility processes over 50,000 packages daily, connecting Atlantic shipping routes with European rail and trucking." },
+      { city: "Hamburg, Germany", role: "Central & Eastern Europe", detail: "Specialised cold storage and automotive logistics serving Europe's industrial heartland." },
+      { city: "Le Havre, France", role: "Channel Bridge", detail: "Strategic positioning on the English Channel — the perfect bridge between continental Europe and our UK operations." },
+      { city: "Amsterdam, Netherlands", role: "Air Cargo", detail: "Secondary European air cargo facility with express European delivery services." }
+    ]
+  },
+  {
+    name: "Asia Pacific",
+    locations: [
+      { city: "Pune, India", role: "Asian Operations Center", detail: "Over 800 skilled professionals providing 24/7 support, real-time tracking, and specialised handling for the world's fastest-growing market." },
+      { city: "Singapore", role: "Southeast Asia Hub", detail: "Premier transshipment hub connecting markets from Jakarta to Manila with precision and local expertise." },
+      { city: "Hong Kong", role: "China Gateway", detail: "Vital link between mainland China and global markets, with specialised international customs expertise." },
+      { city: "Sydney, Australia", role: "Pacific Headquarters", detail: "Managing shipments across Oceania with specialised equipment for extreme weather and remote deliveries." },
+      { city: "Melbourne, Australia", role: "Industrial Logistics", detail: "Industrial and automotive logistics serving southeastern Australia's manufacturing centers." }
+    ]
+  },
+  {
+    name: "Middle East, Africa & Americas",
+    locations: [
+      { city: "Dubai, UAE", role: "Middle Eastern Operations", detail: "Serving markets from Cairo to Karachi across the Middle East and surrounding regions." },
+      { city: "São Paulo, Brazil", role: "South American Headquarters", detail: "Managing distribution across the South American continent." },
+      { city: "Lagos, Nigeria", role: "West African Operations", detail: "Supporting the continent's growing commercial centers across West Africa." }
+    ]
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <span class="topbar-left">
+      <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      <span>Phone: +1 4700 555 555</span>
+    </span>
+    <a class="topbar-cta" href="/contact">Enquire Now</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <span class="logo-main">GERBACH</span>
+        <span class="logo-sub">Logistics &amp; Expedition Inc.</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="/our-story">Our Story</a></li>
+        <li><a href="/our-people">Leadership</a></li>
+        <li><a href="/global-reach" class="active">Global Reach</a></li>
+        <li><a href="/advanced-systems">Advanced Systems</a></li>
+        <li><a href="/our-promise">Our Promise</a></li>
+        <li><a href="/our-guarantee">Our Guarantee</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/images/aerial-background-slice.jpg" alt="Global logistics network" />
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Gerbach Logistics &amp; Expedition</p>
+    <h1>Global Reach</h1>
+    <p class="subhead">Where the World Meets, Gerbach Delivers</p>
+  </div>
+</section>
+
+<!-- Stats band -->
+<section class="stats-band">
+  <div class="container stats-grid">
+    <div class="stat">
+      <span class="stat-number">47</span>
+      <span class="stat-label">Countries served</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">6</span>
+      <span class="stat-label">Continents</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">50k+</span>
+      <span class="stat-label">Packages daily (Rotterdam alone)</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">15</span>
+      <span class="stat-label">Languages spoken in Sandport HQ</span>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-inner">
+      <h2>More Than a Network</h2>
+      <p>From our founding garage in Cicero, Illinois to the furthest corners of the globe, Gerbach has built more than a logistics network — we've created a living, breathing ecosystem of connections that spans every time zone, every culture, and every possibility.</p>
+      <p>Our global reach isn't measured in miles, but in the relationships we've forged and the promises we've kept across six continents. Each of our locations operates with deep local knowledge while maintaining the Gerbach standard of excellence. When you ship with Gerbach, you're not just accessing our global network — you're partnering with local experts who understand your destination as well as they understand your needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Regions -->
+<section class="regions-section">
+  <div class="container">
+    {regions.map(region => (
+      <div class="region-block">
+        <h2 class="region-title">{region.name}</h2>
+        <div class="locations-grid">
+          {region.locations.map(loc => (
+            <div class="location-card">
+              <div class="location-header">
+                <span class="location-city">{loc.city}</span>
+                <span class="location-role">{loc.role}</span>
+              </div>
+              <p class="location-detail">{loc.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- Technology callout -->
+<section class="tech-callout">
+  <div class="container">
+    <div class="callout-inner">
+      <h2>Technology That Connects</h2>
+      <p>Our global network operates on a unified technology platform that treats the world as one interconnected marketplace. Real-time tracking systems monitor every package's journey across multiple time zones, while predictive analytics anticipate and solve potential delays before they impact delivery schedules.</p>
+      <p>Whether your package travels from Cicero to Calcutta or from Sydney to Stockholm, it moves through our network with the same level of visibility and control.</p>
+      <a href="/advanced-systems" class="btn-outline">Explore our systems →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h5>Contact Info</h5>
+      <address>
+        4629 W Cermak Rd<br />
+        Cicero, IL 60804<br />
+        <a href="tel:+14700555555">+1 4700 555 555</a><br />
+        <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/global-reach">Global Reach</a></li>
+        <li><a href="/advanced-systems">Advanced Systems</a></li>
+        <li><a href="/our-guarantee">Our Guarantee</a></li>
+        <li><a href="/our-people">Leadership Team</a></li>
+        <li><a href="/our-promise">Our Promise</a></li>
+        <li><a href="/our-story">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>About Us</h5>
+      <p>Gerbach provides global transportation and expediting services for businesses of all sizes. A family-owned company from Cicero, IL with presence in the US, Europe, India, Africa, and Australasia.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {new Date().getFullYear()} Gerbach Logistics and Expedition Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #c8102e;
+    --red-dark: #9e0c24;
+    --black: #0d0d0d;
+    --dark: #1a1a1a;
+    --mid: #2e2e2e;
+    --grey: #6b6b6b;
+    --light: #f4f4f2;
+    --white: #ffffff;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--black); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  ul { list-style: none; }
+  address { font-style: normal; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  /* Top bar */
+  .topbar { background: var(--black); font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.04em; padding: 0.5rem 0; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .topbar-left { display: flex; gap: 2rem; color: #aaa; }
+  .topbar-left a { color: #aaa; }
+  .topbar-left a:hover { color: var(--white); }
+  .topbar-cta { background: var(--red); color: var(--white); padding: 0.3rem 1rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .topbar-cta:hover { background: var(--red-dark); }
+
+  /* Header */
+  .header { background: var(--white); border-bottom: 3px solid var(--red); padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; }
+  .header .container { display: flex; justify-content: space-between; align-items: center; }
+  .logo a { display: flex; flex-direction: column; line-height: 1; }
+  .logo-main { font-family: var(--font-display); font-weight: 900; font-size: 2rem; letter-spacing: 0.08em; color: var(--black); }
+  .logo-sub { font-family: var(--font-display); font-weight: 300; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); }
+  .nav ul { display: flex; gap: 2rem; }
+  .nav a { font-family: var(--font-display); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark); transition: color 0.2s; }
+  .nav a:hover, .nav a.active { color: var(--red); }
+
+  /* Page hero */
+  .page-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+  .page-hero-bg { position: absolute; inset: 0; }
+  .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%); }
+  .page-hero-content { position: relative; z-index: 2; color: var(--white); padding-bottom: 3rem; }
+  .eyebrow { font-family: var(--font-display); font-weight: 300; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+  .page-hero-content h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 5vw, 4rem); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1; margin-bottom: 0.5rem; }
+  .subhead { font-family: var(--font-display); font-weight: 300; font-size: 1.1rem; color: #ccc; }
+
+  /* Stats band */
+  .stats-band { background: var(--red); padding: 2.5rem 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .stat-number { display: block; font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; color: var(--white); line-height: 1; }
+  .stat-label { display: block; font-family: var(--font-display); font-weight: 300; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 0.3rem; }
+
+  /* Intro */
+  .intro-section { padding: 5rem 0; background: var(--white); }
+  .intro-inner { max-width: 800px; }
+  .intro-inner h2 { font-family: var(--font-display); font-weight: 900; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 1.2rem; color: var(--black); }
+  .intro-inner p { font-size: 1rem; color: #444; line-height: 1.8; margin-bottom: 1rem; }
+
+  /* Regions */
+  .regions-section { padding: 0 0 5rem; background: var(--white); }
+
+  .region-block { margin-bottom: 4rem; }
+  .region-block:last-child { margin-bottom: 0; }
+
+  .region-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--dark);
+    padding: 0.6rem 1rem;
+    display: inline-block;
+    margin-bottom: 1px;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #e0e0e0;
+  }
+
+  .location-card {
+    background: var(--white);
+    padding: 1.8rem;
+    transition: background 0.2s;
+  }
+
+  .location-card:hover { background: var(--light); }
+
+  .location-header { margin-bottom: 0.8rem; }
+
+  .location-city {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--black);
+  }
+
+  .location-role {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-top: 0.2rem;
+  }
+
+  .location-detail {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Tech callout */
+  .tech-callout { background: var(--dark); padding: 5rem 0; }
+  .callout-inner { max-width: 700px; }
+  .callout-inner h2 { font-family: var(--font-display); font-weight: 900; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--white); margin-bottom: 1.2rem; }
+  .callout-inner p { font-size: 1rem; color: #999; line-height: 1.8; margin-bottom: 1rem; }
+  .btn-outline { display: inline-block; margin-top: 1rem; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); border: 2px solid var(--red); padding: 0.7rem 1.8rem; transition: all 0.2s; }
+  .btn-outline:hover { background: var(--red); color: var(--white); }
+
+  /* Footer */
+  .footer { background: var(--black); color: var(--light); padding: 4rem 0 0; }
+  .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid #2a2a2a; }
+  .footer-col h5 { font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 1.2rem; }
+  .footer-col address, .footer-col p { font-size: 0.9rem; color: #888; line-height: 1.8; }
+  .footer-col a { color: #888; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--white); }
+  .footer-col ul li { margin-bottom: 0.5rem; }
+  .footer-col ul a { font-size: 0.9rem; }
+  .footer-bottom { padding: 1.2rem 0; }
+  .footer-bottom p { font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.05em; color: #444; text-align: center; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .locations-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .nav { display: none; }
+  }
+</style>

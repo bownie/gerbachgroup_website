@@ -2,11 +2,11 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://onemoreislandbook.com/",
-    title: "One More Island",
-    description: "The new novel from Richard W. Bown. Coming Fall 2026.",
+    url: "https://gerbachgroup.com/",
+    title: "Gerbach Group",
+    description: "Gerbach Group is a fictional company that features in Human Software by Richard W. Bown",
     author: "Richard Bown",
-    profile: "https://richardwbown.com",
+    profile: "https://humansoftwarebook.com",
     ogImage: "default-og.jpg",
     lang: "en",
     timezone: "Europe/Amsterdam",

@@ -1,0 +1,346 @@
+---
+// src/pages/our-promise.astro
+const title = "Our Promise — Gerbach Logistics and Expedition Inc";
+const description = "Moving your business forward. Experience logistics redefined through superior systems, seamless processes, and unmatched global reach.";
+
+const promises = [
+  {
+    heading: "Global Reach, Local Care",
+    body: "From bustling metropolises to the most remote corners of the earth, our extensive network spans every continent and connects every possibility. Your packages don't just travel — they arrive with purpose, delivered by partners who understand that distance should never be a barrier to your ambitions."
+  },
+  {
+    heading: "Superior Systems That Think Ahead",
+    body: "Our cutting-edge technology doesn't just track your shipments — it anticipates their needs. Advanced routing algorithms, AI-powered optimisation, and real-time intelligence ensure your packages take the smartest path possible, while our intuitive platform keeps you informed every step of the way."
+  },
+  {
+    heading: "Seamlessly Simple, Exceptionally Reliable",
+    body: "Complexity has no place in great logistics. Our streamlined processes eliminate friction from booking to delivery, transforming what was once cumbersome into something beautifully simple. One click, complete transparency, total peace of mind."
+  },
+  {
+    heading: "Built for Your Success",
+    body: "Whether you're a startup shipping your first prototype or a multinational corporation managing complex supply chains, Gerbach scales with your vision. We're not just your logistics partner — we're your growth enabler, your reliability anchor, and your competitive advantage rolled into one."
+  },
+  {
+    heading: "The Promise Behind Every Package",
+    body: "Every shipment carries more than goods — it carries hopes, commitments, and trust. Our military-grade security protocols, comprehensive insurance coverage, and dedicated account management ensure that trust is never misplaced. Your success is our mission, and your peace of mind is our guarantee."
+  }
+];
+
+const standards = [
+  "Lightning-fast processing with same-day pickup available",
+  "Real-time tracking with predictive delivery windows",
+  "24/7 customer support from logistics experts who care",
+  "Flexible solutions tailored to your unique requirements",
+  "Sustainable practices that protect our planet's future",
+  "Competitive pricing without compromising on quality"
+];
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <span class="topbar-left">
+      <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      <span>Phone: +1 4700 555 555</span>
+    </span>
+    <a class="topbar-cta" href="/contact">Enquire Now</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <span class="logo-main">GERBACH</span>
+        <span class="logo-sub">Logistics &amp; Expedition Inc.</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="/our-story">Our Story</a></li>
+        <li><a href="/our-people">Leadership</a></li>
+        <li><a href="/global-reach">Global Reach</a></li>
+        <li><a href="/advanced-systems">Advanced Systems</a></li>
+        <li><a href="/our-promise" class="active">Our Promise</a></li>
+        <li><a href="/our-guarantee">Our Guarantee</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/images/aerial-background-slice.jpg" alt="Gerbach promise" />
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Gerbach Logistics &amp; Expedition</p>
+    <h1>Our Promise</h1>
+    <p class="subhead">Moving Your Business Forward</p>
+  </div>
+</section>
+
+<!-- Opening statement -->
+<section class="opening-section">
+  <div class="container">
+    <div class="opening-inner">
+      <p class="opening-text">Experience logistics redefined through superior systems, seamless processes, and unmatched global reach. At Gerbach, we don't just move packages — we move your business forward.</p>
+      <p class="opening-sub">Every shipment is treated with the precision of a Swiss timepiece and the care of a family heirloom, because we know that behind every tracking number lies someone's trust, dreams, and success.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Promise blocks -->
+<section class="promises-section">
+  <div class="container">
+    <div class="promises-grid">
+      {promises.map((promise, i) => (
+        <div class="promise-card">
+          <span class="promise-number">{String(i + 1).padStart(2, '0')}</span>
+          <div class="promise-body">
+            <h2>{promise.heading}</h2>
+            <p>{promise.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- The Gerbach Standard -->
+<section class="standards-section">
+  <div class="container">
+    <div class="standards-inner">
+      <h2>Experience the Gerbach Standard</h2>
+      <ul class="standards-list">
+        {standards.map(standard => (
+          <li>{standard}</li>
+        ))}
+      </ul>
+      <a href="/our-guarantee" class="btn-outline">See our guarantee →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h5>Contact Info</h5>
+      <address>
+        4629 W Cermak Rd<br />
+        Cicero, IL 60804<br />
+        <a href="tel:+14700555555">+1 4700 555 555</a><br />
+        <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/global-reach">Global Reach</a></li>
+        <li><a href="/advanced-systems">Advanced Systems</a></li>
+        <li><a href="/our-guarantee">Our Guarantee</a></li>
+        <li><a href="/our-people">Leadership Team</a></li>
+        <li><a href="/our-promise">Our Promise</a></li>
+        <li><a href="/our-story">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>About Us</h5>
+      <p>Gerbach provides global transportation and expediting services for businesses of all sizes. A family-owned company from Cicero, IL with presence in the US, Europe, India, Africa, and Australasia.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {new Date().getFullYear()} Gerbach Logistics and Expedition Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #c8102e;
+    --red-dark: #9e0c24;
+    --black: #0d0d0d;
+    --dark: #1a1a1a;
+    --mid: #2e2e2e;
+    --grey: #6b6b6b;
+    --light: #f4f4f2;
+    --white: #ffffff;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--black); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  ul { list-style: none; }
+  address { font-style: normal; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  /* Top bar */
+  .topbar { background: var(--black); font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.04em; padding: 0.5rem 0; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .topbar-left { display: flex; gap: 2rem; color: #aaa; }
+  .topbar-left a { color: #aaa; }
+  .topbar-left a:hover { color: var(--white); }
+  .topbar-cta { background: var(--red); color: var(--white); padding: 0.3rem 1rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .topbar-cta:hover { background: var(--red-dark); }
+
+  /* Header */
+  .header { background: var(--white); border-bottom: 3px solid var(--red); padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; }
+  .header .container { display: flex; justify-content: space-between; align-items: center; }
+  .logo a { display: flex; flex-direction: column; line-height: 1; }
+  .logo-main { font-family: var(--font-display); font-weight: 900; font-size: 2rem; letter-spacing: 0.08em; color: var(--black); }
+  .logo-sub { font-family: var(--font-display); font-weight: 300; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); }
+  .nav ul { display: flex; gap: 2rem; }
+  .nav a { font-family: var(--font-display); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark); transition: color 0.2s; }
+  .nav a:hover, .nav a.active { color: var(--red); }
+
+  /* Page hero */
+  .page-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+  .page-hero-bg { position: absolute; inset: 0; }
+  .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%); }
+  .page-hero-content { position: relative; z-index: 2; color: var(--white); padding-bottom: 3rem; }
+  .eyebrow { font-family: var(--font-display); font-weight: 300; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+  .page-hero-content h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 5vw, 4rem); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1; margin-bottom: 0.5rem; }
+  .subhead { font-family: var(--font-display); font-weight: 300; font-size: 1.1rem; color: #ccc; }
+
+  /* Opening */
+  .opening-section { background: var(--dark); padding: 4rem 0; }
+  .opening-inner { max-width: 820px; }
+  .opening-text { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--white); line-height: 1.5; margin-bottom: 1.5rem; }
+  .opening-sub { font-size: 1rem; color: #888; line-height: 1.8; }
+
+  /* Promises */
+  .promises-section { padding: 5rem 0; background: var(--white); }
+  .promises-grid { display: grid; gap: 1px; background: #e8e8e8; }
+
+  .promise-card {
+    background: var(--white);
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: start;
+    transition: background 0.2s;
+  }
+
+  .promise-card:hover { background: var(--light); }
+
+  .promise-number {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 3rem;
+    color: #e0e0e0;
+    line-height: 1;
+    padding-top: 0.2rem;
+  }
+
+  .promise-card:hover .promise-number { color: var(--red); }
+
+  .promise-body h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    margin-bottom: 0.7rem;
+  }
+
+  .promise-body p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.75;
+  }
+
+  /* Standards */
+  .standards-section { background: var(--dark); padding: 5rem 0; }
+  .standards-inner { max-width: 800px; }
+
+  .standards-inner h2 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+
+  .standards-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #333;
+    margin-bottom: 2.5rem;
+  }
+
+  .standards-list li {
+    background: var(--mid);
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    color: #bbb;
+    padding-left: 2.5rem;
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .standards-list li:hover { background: #3a3a3a; }
+
+  .standards-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 1rem;
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .btn-outline { display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); border: 2px solid var(--red); padding: 0.7rem 1.8rem; transition: all 0.2s; }
+  .btn-outline:hover { background: var(--red); color: var(--white); }
+
+  /* Footer */
+  .footer { background: var(--black); color: var(--light); padding: 4rem 0 0; }
+  .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid #2a2a2a; }
+  .footer-col h5 { font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 1.2rem; }
+  .footer-col address, .footer-col p { font-size: 0.9rem; color: #888; line-height: 1.8; }
+  .footer-col a { color: #888; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--white); }
+  .footer-col ul li { margin-bottom: 0.5rem; }
+  .footer-bottom { padding: 1.2rem 0; }
+  .footer-bottom p { font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.05em; color: #444; text-align: center; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .promise-card { grid-template-columns: 1fr; gap: 0.5rem; }
+    .promise-number { font-size: 2rem; }
+    .standards-list { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .nav { display: none; }
+  }
+</style>

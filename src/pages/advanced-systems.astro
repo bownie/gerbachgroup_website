@@ -1,0 +1,396 @@
+---
+// src/pages/advanced-systems.astro
+const title = "Advanced Systems — Gerbach Logistics and Expedition Inc";
+const description = "TrolleyTrack, ChainLink, and DollyAI — Gerbach's proprietary technology suite powering global logistics excellence.";
+
+const systems = [
+  {
+    id: "trolleytrack",
+    name: "TrolleyTrack",
+    subtitle: "Warehouse Management System",
+    tagline: "More Than Management — Complete Warehouse Intelligence",
+    intro: "TrolleyTrack transforms warehouse operations from reactive management to proactive optimisation. Built from decades of real-world logistics experience, this comprehensive system handles everything from inventory tracking to labour optimisation with unprecedented precision and flexibility.",
+    deployments: [
+      {
+        type: "Cloud-Hosted",
+        points: [
+          "Immediate deployment with zero infrastructure investment — operational within days, not months",
+          "Automatic updates ensure you always have the latest features and security patches",
+          "Elastic scaling handles peak seasons without performance degradation",
+          "99.99% uptime with global redundancy — your operations never sleep",
+          "Secure encrypted access from anywhere in the world"
+        ]
+      },
+      {
+        type: "On-Premises",
+        points: [
+          "Complete control over your data with customisable security protocols",
+          "Direct integration with existing enterprise systems without internet dependency",
+          "Customisable workflows and reporting to match your exact operational needs",
+          "Consistent performance regardless of internet connectivity",
+          "Ultimate data sovereignty for organisations with strict compliance requirements"
+        ]
+      }
+    ],
+    capabilities: [
+      "Real-time inventory tracking with RFID and barcode integration across multiple locations",
+      "Advanced pick path optimisation — reduces warehouse travel time by up to 35%",
+      "Intelligent space utilisation algorithms that maximise storage efficiency",
+      "Comprehensive labour management with productivity tracking and task assignment",
+      "Automated reorder alerts with supplier integration for seamless replenishment",
+      "Detailed analytics with customisable dashboards for every level of management"
+    ]
+  },
+  {
+    id: "chainlink",
+    name: "ChainLink",
+    subtitle: "Supply Chain Management Solution",
+    tagline: "Orchestrating Complexity Into Simplicity",
+    intro: "ChainLink doesn't just manage your supply chain — it anticipates its needs. This powerful platform provides end-to-end visibility and control across every supplier, every shipment, and every delivery, transforming supply chain complexity into competitive advantage.",
+    deployments: [
+      {
+        type: "Cloud-Hosted",
+        points: [
+          "Rapid deployment across multiple locations with automatic synchronisation",
+          "Scalable processing power handles supply chain complexity without hardware upgrades",
+          "Automatic backups and disaster recovery protect against data loss",
+          "Seamless integration with external suppliers via secure API connections",
+          "Global accessibility for multinational operations"
+        ]
+      },
+      {
+        type: "On-Premises",
+        points: [
+          "Complete control over sensitive supply chain data with customisable security",
+          "Direct integration with legacy systems without external dependencies",
+          "Ability to maintain operations during internet outages",
+          "Customisable data retention and compliance controls",
+          "Dedicated processing power ensures consistent peak performance"
+        ]
+      }
+    ],
+    capabilities: [
+      "Multi-tier supplier management with performance tracking and automated vendor scorecards",
+      "Demand forecasting using advanced algorithms analysing historical data, seasonal trends, and market indicators",
+      "Real-time shipment tracking across all transport modes with exception management",
+      "Purchase order automation with approval workflows and budget controls",
+      "Risk management tools that identify potential disruptions before they impact operations",
+      "Comprehensive reporting suite with customisable KPIs and executive dashboards"
+    ]
+  },
+  {
+    id: "dollyai",
+    name: "DollyAI",
+    subtitle: "Intelligent Logistics Platform",
+    tagline: "Where Artificial Intelligence Meets Human Insight",
+    intro: "DollyAI represents the next evolution in supply chain technology, combining machine learning, predictive analytics, and natural language processing to create a system that doesn't just respond to logistics challenges — it prevents them. This revolutionary platform learns from every transaction, every route, and every decision to continuously optimise performance across your entire logistics ecosystem.",
+    deployments: [
+      {
+        type: "Predictive Intelligence",
+        points: [
+          "Advanced machine learning analyses millions of data points to predict demand fluctuations",
+          "Identifies potential disruptions and recommends optimal routing decisions",
+          "Doesn't just tell you what happened — shows you what's going to happen and what to do about it"
+        ]
+      },
+      {
+        type: "Autonomous Optimisation",
+        points: [
+          "Continuous route optimisation adapting to real-time weather, traffic, and capacity constraints",
+          "Intelligent inventory positioning that anticipates demand and pre-positions stock",
+          "Automated carrier selection balancing cost, speed, and reliability for every shipment"
+        ]
+      }
+    ],
+    capabilities: [
+      "Natural language interface — query your entire logistics operation in plain English",
+      "Anomaly detection that identifies irregularities before they become problems",
+      "Dynamic pricing optimisation that maximises margins while maintaining competitiveness",
+      "Automated exception management that resolves routine issues without human intervention",
+      "Continuous learning from every transaction to improve future performance",
+      "Integration with TrolleyTrack and ChainLink for complete operational intelligence"
+    ]
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <span class="topbar-left">
+      <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      <span>Phone: +1 4700 555 555</span>
+    </span>
+    <a class="topbar-cta" href="/contact">Enquire Now</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <span class="logo-main">GERBACH</span>
+        <span class="logo-sub">Logistics &amp; Expedition Inc.</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="/our-story">Our Story</a></li>
+        <li><a href="/our-people">Leadership</a></li>
+        <li><a href="/global-reach">Global Reach</a></li>
+        <li><a href="/advanced-systems" class="active">Advanced Systems</a></li>
+        <li><a href="/our-promise">Our Promise</a></li>
+        <li><a href="/our-guarantee">Our Guarantee</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/images/aerial-background-slice.jpg" alt="Advanced logistics systems" />
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Gerbach Logistics &amp; Expedition</p>
+    <h1>Advanced Systems</h1>
+    <p class="subhead">Powering Your Global Excellence</p>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-inner">
+      <p class="lead">At Gerbach, we believe that exceptional logistics begins with exceptional technology. Our integrated suite of proprietary systems doesn't just manage inventory and track shipments — it creates an intelligent ecosystem that learns, adapts, and optimises with every transaction.</p>
+      <div class="system-nav">
+        <a href="#trolleytrack">TrolleyTrack</a>
+        <a href="#chainlink">ChainLink</a>
+        <a href="#dollyai">DollyAI</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Systems -->
+{systems.map(system => (
+  <section class="system-section" id={system.id}>
+    <div class="container">
+      <div class="system-header">
+        <div class="system-title-block">
+          <h2 class="system-name">{system.name}</h2>
+          <p class="system-subtitle">{system.subtitle}</p>
+        </div>
+        <p class="system-tagline">{system.tagline}</p>
+      </div>
+
+      <p class="system-intro">{system.intro}</p>
+
+      <div class="deployment-grid">
+        {system.deployments.map(dep => (
+          <div class="deployment-card">
+            <h3>{dep.type}</h3>
+            <ul>
+              {dep.points.map(point => (
+                <li>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div class="capabilities-block">
+        <h3>Core Capabilities</h3>
+        <ul class="capabilities-list">
+          {system.capabilities.map(cap => (
+            <li>{cap}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+))}
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to transform your logistics?</h2>
+    <p>Our technology team is ready to walk you through a demonstration of any of our systems and build a solution tailored to your operation.</p>
+    <a href="mailto:reachus@gerbachgroup.com" class="btn-primary">Get in touch →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h5>Contact Info</h5>
+      <address>
+        4629 W Cermak Rd<br />
+        Cicero, IL 60804<br />
+        <a href="tel:+14700555555">+1 4700 555 555</a><br />
+        <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/global-reach">Global Reach</a></li>
+        <li><a href="/advanced-systems">Advanced Systems</a></li>
+        <li><a href="/our-guarantee">Our Guarantee</a></li>
+        <li><a href="/our-people">Leadership Team</a></li>
+        <li><a href="/our-promise">Our Promise</a></li>
+        <li><a href="/our-story">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>About Us</h5>
+      <p>Gerbach provides global transportation and expediting services for businesses of all sizes. A family-owned company from Cicero, IL with presence in the US, Europe, India, Africa, and Australasia.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {new Date().getFullYear()} Gerbach Logistics and Expedition Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #c8102e;
+    --red-dark: #9e0c24;
+    --black: #0d0d0d;
+    --dark: #1a1a1a;
+    --mid: #2e2e2e;
+    --grey: #6b6b6b;
+    --light: #f4f4f2;
+    --white: #ffffff;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--black); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  ul { list-style: none; }
+  address { font-style: normal; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  /* Top bar */
+  .topbar { background: var(--black); font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.04em; padding: 0.5rem 0; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .topbar-left { display: flex; gap: 2rem; color: #aaa; }
+  .topbar-left a { color: #aaa; }
+  .topbar-left a:hover { color: var(--white); }
+  .topbar-cta { background: var(--red); color: var(--white); padding: 0.3rem 1rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .topbar-cta:hover { background: var(--red-dark); }
+
+  /* Header */
+  .header { background: var(--white); border-bottom: 3px solid var(--red); padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; }
+  .header .container { display: flex; justify-content: space-between; align-items: center; }
+  .logo a { display: flex; flex-direction: column; line-height: 1; }
+  .logo-main { font-family: var(--font-display); font-weight: 900; font-size: 2rem; letter-spacing: 0.08em; color: var(--black); }
+  .logo-sub { font-family: var(--font-display); font-weight: 300; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); }
+  .nav ul { display: flex; gap: 2rem; }
+  .nav a { font-family: var(--font-display); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark); transition: color 0.2s; }
+  .nav a:hover, .nav a.active { color: var(--red); }
+
+  /* Page hero */
+  .page-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+  .page-hero-bg { position: absolute; inset: 0; }
+  .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%); }
+  .page-hero-content { position: relative; z-index: 2; color: var(--white); padding-bottom: 3rem; }
+  .eyebrow { font-family: var(--font-display); font-weight: 300; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+  .page-hero-content h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 5vw, 4rem); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1; margin-bottom: 0.5rem; }
+  .subhead { font-family: var(--font-display); font-weight: 300; font-size: 1.1rem; color: #ccc; }
+
+  /* Intro */
+  .intro-section { background: var(--dark); padding: 3.5rem 0; }
+  .intro-inner { max-width: 800px; }
+  .lead { font-family: var(--font-display); font-size: 1.25rem; font-weight: 300; color: #bbb; line-height: 1.6; margin-bottom: 2rem; }
+  .system-nav { display: flex; gap: 1px; }
+  .system-nav a { font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--mid); color: #999; padding: 0.6rem 1.5rem; transition: all 0.2s; }
+  .system-nav a:hover { background: var(--red); color: var(--white); }
+
+  /* System sections */
+  .system-section { padding: 5rem 0; border-bottom: 1px solid #e8e8e8; }
+  .system-section:nth-child(odd) { background: var(--white); }
+  .system-section:nth-child(even) { background: var(--light); }
+
+  .system-header { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-bottom: 2rem; }
+
+  .system-name { font-family: var(--font-display); font-weight: 900; font-size: 3rem; text-transform: uppercase; letter-spacing: 0.02em; color: var(--black); line-height: 1; }
+  .system-subtitle { font-family: var(--font-display); font-weight: 300; font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-top: 0.4rem; }
+  .system-tagline { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; color: var(--grey); line-height: 1.4; align-self: center; }
+
+  .system-intro { font-size: 1rem; color: #444; line-height: 1.8; margin-bottom: 2.5rem; max-width: 800px; }
+
+  .deployment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: #ddd; margin-bottom: 2.5rem; }
+
+  .deployment-card { background: var(--dark); padding: 2rem; }
+  .system-section:nth-child(even) .deployment-card { background: var(--mid); }
+
+  .deployment-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 1.2rem; }
+
+  .deployment-card ul li { font-size: 0.9rem; color: #aaa; line-height: 1.6; padding: 0.4rem 0; padding-left: 1rem; position: relative; border-bottom: 1px solid #333; }
+  .deployment-card ul li:last-child { border-bottom: none; }
+  .deployment-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--red); font-size: 0.7rem; top: 0.55rem; }
+
+  .capabilities-block h3 { font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--black); margin-bottom: 1rem; }
+
+  .capabilities-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 3rem; }
+  .capabilities-list li { font-size: 0.9rem; color: #555; line-height: 1.6; padding-left: 1rem; position: relative; }
+  .capabilities-list li::before { content: '✓'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+
+  /* CTA */
+  .cta-section { background: var(--red); padding: 4rem 0; }
+  .cta-section h2 { font-family: var(--font-display); font-weight: 900; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--white); margin-bottom: 1rem; }
+  .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 2rem; max-width: 600px; }
+  .btn-primary { display: inline-block; background: var(--white); color: var(--red); font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.2rem; transition: all 0.2s; }
+  .btn-primary:hover { background: var(--black); color: var(--white); }
+
+  /* Footer */
+  .footer { background: var(--black); color: var(--light); padding: 4rem 0 0; }
+  .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid #2a2a2a; }
+  .footer-col h5 { font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 1.2rem; }
+  .footer-col address, .footer-col p { font-size: 0.9rem; color: #888; line-height: 1.8; }
+  .footer-col a { color: #888; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--white); }
+  .footer-col ul li { margin-bottom: 0.5rem; }
+  .footer-bottom { padding: 1.2rem 0; }
+  .footer-bottom p { font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.05em; color: #444; text-align: center; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .system-header { grid-template-columns: 1fr; gap: 1rem; }
+    .deployment-grid { grid-template-columns: 1fr; }
+    .capabilities-list { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .nav { display: none; }
+    .system-nav { flex-wrap: wrap; }
+  }
+</style>
