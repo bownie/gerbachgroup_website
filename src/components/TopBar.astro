@@ -1,0 +1,36 @@
+---
+// src/components/TopBar.astro
+---
+<div class="topbar">
+  <div class="container">
+    <span class="topbar-left">
+      <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      <span>Phone: +1 4700 555 555</span>
+    </span>
+    <a class="topbar-cta" href="/contact">Enquire Now</a>
+  </div>
+</div>
+
+<style>
+  .topbar {
+    background: var(--black);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 0;
+  }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .topbar-left { display: flex; gap: 2rem; color: #aaa; }
+  .topbar-left a { color: #aaa; }
+  .topbar-left a:hover { color: var(--white); }
+  .topbar-cta {
+    background: var(--red);
+    color: var(--white);
+    padding: 0.3rem 1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .topbar-cta:hover { background: var(--red-dark); }
+</style>

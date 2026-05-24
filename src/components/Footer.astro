@@ -1,31 +1,76 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-import Socials from "./Socials.astro";
-import { useTranslations } from "@/i18n";
-
-type Props = {
-  noMarginTop?: boolean;
-} & HTMLAttributes<"footer">;
-
-const { noMarginTop = false, class: className, ...attrs } = Astro.props;
-
-const t = useTranslations(Astro.currentLocale);
-const currentYear = new Date().getFullYear();
+// src/components/Footer.astro
+const year = new Date().getFullYear();
 ---
-
-<footer
-  class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
-  {...attrs}
->
-  <div
-    class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"
-  >
-    <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.footer.copyright} &#169; {currentYear}</span>
-      <span>&nbsp;Richard Bown</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.footer.allRightsReserved}</span>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h5>Contact Info</h5>
+      <address>
+        4629 W Cermak Rd<br />
+        Cicero, IL 60804<br />
+        <a href="tel:+14700555555">+1 4700 555 555</a><br />
+        <a href="mailto:reachus@gerbachgroup.com">reachus@gerbachgroup.com</a>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/our-story">Our Story</a></li>
+        <li><a href="/our-people">Leadership Team</a></li>
+        <li><a href="/global-reach">Global Reach</a></li>
+        <li><a href="/advanced-systems">Advanced Systems</a></li>
+        <li><a href="/our-promise">Our Promise</a></li>
+        <li><a href="/our-guarantee">Our Guarantee</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>About Us</h5>
+      <p>Gerbach provides global transportation and expediting services for businesses of all sizes. A family-owned company from Cicero, IL with presence in the US, Europe, India, Africa, and Australasia.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {year} Gerbach Logistics and Expedition Inc. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
+
+<style>
+  .footer { background: var(--black); color: var(--light); padding: 4rem 0 0; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .footer-col h5 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.2rem;
+  }
+  .footer-col address,
+  .footer-col p { font-size: 0.9rem; color: #888; line-height: 1.8; font-style: normal; }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; }
+  .footer-col ul li { margin-bottom: 0.5rem; }
+  .footer-col a { color: #888; text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--white); }
+  .footer-bottom { padding: 1.2rem 0; }
+  .footer-bottom p {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: #444;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
